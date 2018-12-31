@@ -1,2 +1,4 @@
-# My_MOOCs
-Repository of the Online Courses (MOOC's) I have taken along with the assignments and notes for them. 📖🤓🧐
+## My MOOC's
+### List of the Online Courses I have taken for Personal Enrichment
+
+**Note: These notes and solutions are my solutions and are only being presented as a reference. Please do not copy or plagiarize the content or code as it impedes your learning skills and knowledge.**
