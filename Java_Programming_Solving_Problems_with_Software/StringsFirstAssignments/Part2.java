@@ -1,20 +1,25 @@
 import edu.duke.*;
 
 /**
- * Part 1 of the assignment.
+ * Part 2 of the assignment.
  * 
  * @author Arjun Bharadwaj
  * @version 1.0
  */
-public class Part1 {
+public class Part2 {
    
-    public String findSimpleGene(String dna) {
-        int startCodonIndex = dna.indexOf("ATG");
+    public String findSimpleGene(String dna, String startCodon, String endCodon) {
+        
+        dna = dna.toUpperCase();
+        startCodon = startCodon.toUpperCase();
+        endCodon = endCodon.toUpperCase();
+        
+        int startCodonIndex = dna.indexOf(startCodon);
         if (startCodonIndex == -1) {
             return "";
         }
 
-        int endCodonIndex = dna.indexOf("TAA", startCodonIndex + 3);
+        int endCodonIndex = dna.indexOf(endCodon, startCodonIndex + 3);
         if (endCodonIndex == -1) {
             return "";
         }
@@ -32,15 +37,14 @@ public class Part1 {
         ,"GGGGGGGGGGGG"
         ,"AGGATGGAATAGTAGTAA"};
         for(String dna: dnas) {
-            System.out.println(dna + " DNA has " + 
-                                findSimpleGene(dna) + "gene");
+            System.out.println(dna + " DNA has --> " + 
+                                findSimpleGene(dna, "ATG", "TAA") + " gene");
         }
         System.out.println("--------------------------");
     }
         
     public static void main (String[] args) {
-        Part1 p = new Part1();
+        Part2 p = new Part2();
         p.testSimpleGene();
     } // End of main
-
 }
