@@ -24,10 +24,10 @@ public class Part4 {
     
     
     public void testing() {
-       System.out.println("--------------------------------");
-       List<String> links = findYoutubeLinks("http://www.dukelearntoprogram.com/course2/data/manylinks.html");
-       for(String link: links)
-        System.out.println(link);
+        System.out.println("--------------------------------");
+        List<String> links = findYoutubeLinks("http://www.dukelearntoprogram.com/course2/data/manylinks.html");
+        for(String link: links)
+            System.out.println(link);
         System.out.println("--------------------------------");
     }
     
