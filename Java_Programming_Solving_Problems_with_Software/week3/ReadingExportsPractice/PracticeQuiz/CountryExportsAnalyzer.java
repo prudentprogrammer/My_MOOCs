@@ -10,14 +10,14 @@ public class CountryExportsAnalyzer {
 
     public void readExports() {
         FileResource fr = new FileResource();
+        //CSVParser cp = fr.getCSVParser();
+        //System.out.println(getCountryInfo(cp, "Nauru"));
+        
         CSVParser cp = fr.getCSVParser();
-        System.out.println(getCountryInfo(cp, "Nauru"));
+        listExportersTwoProducts(cp, "cotton", "flowers");
         
         cp = fr.getCSVParser();
-        listExportersTwoProducts(cp, "gold", "diamonds");
-        
-        cp = fr.getCSVParser();
-        System.out.println(getNumberOfExporters(cp, "gold"));
+        System.out.println(getNumberOfExporters(cp, "cocoa"));
         
         cp = fr.getCSVParser();
         printBigExporters(cp, "$999,999,999,999");
