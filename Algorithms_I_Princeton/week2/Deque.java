@@ -13,7 +13,7 @@ public class Deque<Item> implements Iterable<Item> {
     private Node head, tail;
 
     private class Node {
-        private Item item;
+        private final Item item;
         private Node next;
         private Node prev;
 
@@ -77,7 +77,7 @@ public class Deque<Item> implements Iterable<Item> {
         checkDequeEmpty();
 
         Node temp = head;
-        temp.next = null;
+
 
         if (size() == 1) {
             head = null;
@@ -89,6 +89,7 @@ public class Deque<Item> implements Iterable<Item> {
         }
 
         size -= 1;
+        temp.next = null;
         return temp.item;
     }
 
@@ -154,16 +155,20 @@ public class Deque<Item> implements Iterable<Item> {
 
     public static void main(String[] args) {
         // Client code.
-        Deque<Integer> deq = new Deque<>();
-
-        deq.addFirst(1);
-        deq.addFirst(3);
-        deq.addLast(5);
-
-        Iterator<Integer> it = deq.iterator();
-        while (it.hasNext()) {
-            System.out.println(it.next());
-        }
+        // Deque<Integer> deq = new Deque<>();
+        //
+        // deq.addFirst(1);
+        // deq.addFirst(3);
+        // deq.addLast(5);
+        //
+        // Iterator<Integer> it = deq.iterator();
+        // while (it.hasNext()) {
+        //     System.out.println(it.next());
+        // }
+        Deque<Integer> deque = new Deque<Integer>();
+        deque.addFirst(1);
+        deque.addFirst(2);
+        deque.addFirst(3);
+        System.out.println(deque.removeFirst());
     }
 }
-
